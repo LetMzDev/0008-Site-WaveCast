@@ -1,30 +1,12 @@
 body {
-	display: grid; /* Aplicar o grid no elemento pai.  transforma o elemento body em um container de grid */
-
-	/*
-		Definir as áreas para posicionar os elementos.
-		Definindo um modelo (template) de áreas dentro do grid, especificando onde os diferentes elementos (definidos por nomes de áreas) devem ser posicionados.
-	*/
+	display: grid; 
 	grid-template-areas:
 	"aside header"
 	"aside main";
-	/*
-		"aside header" define a primeira linha do grid com duas colunas: aside e header.
-		"aside main" define a segunda linha do grid com duas colunas: aside e main.
 
-		Isso cria uma estrutura de grid com duas linhas e duas colunas onde:
-			• A primeira linha tem a área aside e a área header.
-			• A segunda linha tem a área aside e a área main.
-	*/
+	grid-template-columns: auto 1fr;
+
 }
-
-/*
-	grid-area: para definir a área específica que um elemento deve ocupar dentro do grid.
-	• A propriedade grid-area especifica em qual área cada elemento deve ser posicionado dentro do grid.
-		.cabecalho é posicionado na área header.
-		.menu-lateral é posicionado na área aside.
-		.principal é posicionado na área main.
-*/
 
 .cabecalho {
 	grid-area: header;
@@ -37,11 +19,3 @@ body {
 .principal {
 	grid-area: main;
 }
-
-/*
-	Conceitos-Chave
-	Grid Container: body é o container do grid.
-	Grid Items: .menu-lateral, .cabecalho, e .principal são os itens do grid.
-	Grid Template Areas: Define como as áreas do grid são divididas e nomeadas.
-	Grid Area: Associa os elementos específicos a essas áreas nomeadas.
-*/

@@ -1,0 +1,58 @@
+body {
+	display: grid; /* Aplicar o grid no elemento pai.  transforma o elemento body em um container de grid */
+
+	/*
+		Definir as áreas para posicionar os elementos.
+		Definindo um modelo (template) de áreas dentro do grid, especificando onde os diferentes elementos (definidos por nomes de áreas) devem ser posicionados.
+	*/
+	grid-template-areas:
+	"aside header"
+	"aside main";
+	/*
+		"aside header" define a primeira linha do grid com duas colunas: aside e header.
+		"aside main" define a segunda linha do grid com duas colunas: aside e main.
+
+		Isso cria uma estrutura de grid com duas linhas e duas colunas onde:
+			• A primeira linha tem a área aside e a área header.
+			• A segunda linha tem a área aside e a área main.
+	*/
+
+	grid-template-columns: auto 1fr;
+	/*
+		A propriedade grid-template-columns é usada para definir as larguras das colunas em um grid.
+
+			• auto: A primeira coluna terá uma largura automática. Isso significa que ela se ajustará ao tamanho do conteúdo que estiver dentro dessa 	coluna. Se o conteúdo for pequeno, a coluna será pequena. Se o conteúdo for grande, a coluna será grande.
+
+			• 1fr: A segunda coluna terá uma largura flexível que ocupará o espaço restante disponível. 1fr significa "uma fração" do espaço disponível. Se houver espaço livre após a primeira coluna ser definida, a segunda coluna ocupará todo esse espaço.
+		
+		Essa medida de 1fr é bastante poderosa quando queremos trabalhar com responsividade, porque ajusta toda a largura disponível dentro desse 1fr, ou seja, nessa fração disponível.
+	*/
+}
+
+/*
+	grid-area: para definir a área específica que um elemento deve ocupar dentro do grid.
+	• A propriedade grid-area especifica em qual área cada elemento deve ser posicionado dentro do grid.
+		.cabecalho é posicionado na área header.
+		.menu-lateral é posicionado na área aside.
+		.principal é posicionado na área main.
+*/
+
+.cabecalho {
+	grid-area: header;
+}
+
+.menu-lateral {
+	grid-area: aside;
+}
+
+.principal {
+	grid-area: main;
+}
+
+/*
+	Conceitos-Chave
+	Grid Container: body é o container do grid.
+	Grid Items: .menu-lateral, .cabecalho, e .principal são os itens do grid.
+	Grid Template Areas: Define como as áreas do grid são divididas e nomeadas.
+	Grid Area: Associa os elementos específicos a essas áreas nomeadas.
+*/
