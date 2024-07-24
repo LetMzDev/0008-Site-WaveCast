@@ -1,1 +1,1 @@
-# Práticas de CSS com GRID e Responsividade
+# Práticas de CSS com GRID e Responsivo
