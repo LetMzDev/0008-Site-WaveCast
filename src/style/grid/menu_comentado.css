@@ -1,0 +1,12 @@
+.menu-lateral {
+	display: grid;
+	grid-template-rows: auto auto auto 1fr;
+	/*
+		A propriedade grid-template-rows é usada para definir a altura das linhas em um grid.
+		O grid terá quatro linhas.
+
+		• auto: As três primeiras linhas terão alturas automáticas. Isso significa que cada linha se ajustará à altura do conteúdo que estiver dentro dessa linha. Se o conteúdo for pequeno, a linha será pequena. Se o conteúdo for grande, a linha será grande.
+
+		• 1fr: A quarta linha terá uma altura flexível que ocupará o espaço restante disponível. 1fr significa "uma fração" do espaço disponível. Se houver espaço livre após as três primeiras linhas serem definidas, a quarta linha ocupará todo esse espaço.
+	*/
+}
