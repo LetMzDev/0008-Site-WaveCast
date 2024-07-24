@@ -1,3 +1,22 @@
 body {
-	display: grid; /* Aplicar o grid no elemento pai*/
+	display: grid; /* Aplicar o grid no elemento pai */
+
+	/* Definir as áreas para posicionar os elementos */
+	grid-template-areas:
+	"aside header "
+	"aside main"
+}
+
+/* grid-area: para definir a área específica que um elemento deve ocupar dentro do grid. */
+
+.cabecalho {
+	grid-area: header;
+}
+
+.menu-lateral {
+	grid-area: aside;
+}
+
+.principal {
+	grid-area: main;
 }
