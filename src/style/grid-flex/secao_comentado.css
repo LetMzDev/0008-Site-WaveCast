@@ -83,5 +83,18 @@
 			row dense: Combinação de row e dense.
 			column dense: Combinação de column e dense
 	*/
+}
 
+
+.secao-vertical .secao__cartoes .cartao a {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.secao-vertical .secao__cartoes .cartao__titulo {
+	flex-grow: 1;
+	/*
+		A propriedade flex-grow é usada no contexto do Flexbox no CSS e determina a capacidade de um item flexível (flex item) de crescer para ocupar o espaço disponível no contêiner flexível (flex container). Vamos analisar o que a propriedade flex-grow: 1; faz e como ela funciona.
+	*/
 }
