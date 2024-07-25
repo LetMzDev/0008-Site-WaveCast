@@ -1,0 +1,14 @@
+.secao {
+	display: grid;
+	align-items: end;
+	/*
+		A propriedade `align-items: end;` é a responsável por alinhar os itens do grid à parte inferior das células.
+		Ao aplicar essa propriedade à classe `.secao-imagens`, você garante que todas as imagens, independentemente da altura da célula, fiquem alinhadas na parte inferior.
+	*/
+
+	row-gap: 2em;
+}
+
+.secao-horizontal, .secao-vertical {
+	grid-template-rows: 70px auto;
+}
