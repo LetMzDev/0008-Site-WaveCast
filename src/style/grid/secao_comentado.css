@@ -61,10 +61,27 @@
 			minmax(min(80%/2, max(350px, 80%/3)), 1fr): Cada coluna terá um tamanho mínimo e máximo definido dinamicamente:
 			O tamanho mínimo é o menor valor entre 40% da largura do container e o maior valor entre 350px e 26.67% da largura do container.
 			O tamanho máximo é 1 fração do espaço disponível (1fr), permitindo que a coluna ocupe todo o espaço disponível se houver espaço suficiente.
+	*/
+}
 
+.secao-vertical {
+	grid-template-columns: 1fr auto;
+}
 
+.secao-vertical .secao__cartoes {
+	display: grid;
+	grid-auto-flow: column;
+	/*
+		A propriedade grid-auto-flow no CSS controla como os itens são colocados no grid. Ela determina a direção e o preenchimento automático das células do grid quando os itens são adicionados
 
+		grid-auto-flow: row | column | dense | row dense | column dense;
 
-			*/
+		Valores Possíveis:
+			row (padrão): Preenche o grid na direção das linhas. Itens são colocados da esquerda para a direita e depois de cima para baixo.
+			column: Preenche o grid na direção das colunas. Itens são colocados de cima para baixo e depois da esquerda para a direita.
+			dense: Tenta preencher os buracos no grid de forma mais compacta, movendo itens para preencher espaços vazios.
+			row dense: Combinação de row e dense.
+			column dense: Combinação de column e dense
+	*/
 
 }
