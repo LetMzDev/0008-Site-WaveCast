@@ -9,4 +9,20 @@
 
 		• 1fr: A quarta linha terá uma altura flexível que ocupará o espaço restante disponível. 1fr significa "uma fração" do espaço disponível. Se houver espaço livre após as três primeiras linhas serem definidas, a quarta linha ocupará todo esse espaço.
 	*/
+
+	grid-template-rows: repeat(3, auto) 1fr;
+	/* repete 'auto' 3 vezes */
+
+	row-gap: 2rem;
+	/*
+		row-gap: Adiciona espaçamento entre linhas
+
+		O rem é uma medida ótima quando queremos aplicar responsividade no projeto.
+
+		Essa medida pega como ponto de referência a fonte do projeto, o tamanho da fonte que estamos utilizando. E no caso, aqui no menu lateral, estamos utilizando a fonte de 16 pixels. E cada rem, corresponde ao valor da fonte atual. Então como são 2rem, serão 36 pixels de largura que estão sendo aplicados aqui.
+	*/
+}
+
+.menu-lateral__logo {
+	justify-self: center; /* Centralizar na horizontal os elementos */
 }
