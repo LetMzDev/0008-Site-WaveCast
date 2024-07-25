@@ -12,3 +12,57 @@
 .secao-horizontal, .secao-vertical {
 	grid-template-rows: 70px auto;
 }
+
+.secao-horizontal .secao__cartoes {
+	/*
+		Como a class 'secao__cartoes' está também presente nas outras classes (de seção vertical) e não se deseja aplicar o mesmo estilo para as 'verticais' então usar as classes
+			`.secao-horizontal .secao__cartoes`
+	*/
+	display: grid;
+
+	grid-template-columns: repeat(auto-fit, 200px);
+	/*
+		A propriedade grid-template-columns define a largura das colunas em um grid.
+		A função repeat pode ser usada para criar um número repetido de colunas com um determinado tamanho.
+
+		repeat(auto-fit, 200px):
+			repeat: A função repeat permite criar um número de colunas baseado em um padrão repetido.
+			
+			auto-fit: Isso indica que o grid deve criar tantas colunas de 200px quanto possível dentro do container, ajustando-se automaticamente ao tamanho do container. Se o espaço disponível não permitir mais colunas de 200px, o grid ajustará a quantidade de colunas visíveis para caber no espaço disponível.
+			Sempre se ajustando ao espaço disponível.
+
+			200px: Define a largura fixa de cada coluna em 200px.
+	*/
+
+	grid-template-columns: repeat(auto-fit, minmax(min(80%/2, max(350px, 80%/3)), 1fr));
+	/*
+		A propriedade grid-template-columns: repeat(auto-fit, minmax(min(80%/2, max(350px, 80%/3)), 1fr)); passo a passo para entender como ela funciona. Esta propriedade usa funções CSS avançadas para criar um layout de grid responsivo e adaptável.
+	
+		repeat(auto-fit, ...):
+			repeat: A função repeat cria um número repetido de colunas.
+			auto-fit: Isso faz com que o grid se ajuste automaticamente, criando tantas colunas quanto couberem no container.
+
+		minmax(min(80%/2, max(350px, 80%/3)), 1fr):
+			minmax(min(...), 1fr): Define um intervalo de tamanho mínimo e máximo para as colunas.
+			min(80%/2, max(350px, 80%/3)): Vamos quebrar essa parte em pedaços menores para entender melhor.
+
+		min(80%/2, max(350px, 80%/3))
+			80%/2: Metade de 80% da largura do container. Isto dá 40% da largura do container.
+			max(350px, 80%/3):
+				350px: Um valor fixo de 350 pixels.
+				80%/3: Um terço de 80% da largura do container. Isto dá aproximadamente 26.67% da largura do container.
+				max(350px, 80%/3): O maior valor entre 350px e 26.67% da largura do container.
+		min(80%/2, max(350px, 80%/3)): O menor valor entre 40% da largura do container e o resultado do max(350px, 80%/3).
+
+		Resumo da Propriedade
+			repeat(auto-fit, minmax(...)): Cria tantas colunas quanto couberem no container.
+			minmax(min(80%/2, max(350px, 80%/3)), 1fr): Cada coluna terá um tamanho mínimo e máximo definido dinamicamente:
+			O tamanho mínimo é o menor valor entre 40% da largura do container e o maior valor entre 350px e 26.67% da largura do container.
+			O tamanho máximo é 1 fração do espaço disponível (1fr), permitindo que a coluna ocupe todo o espaço disponível se houver espaço suficiente.
+
+
+
+
+			*/
+
+}
