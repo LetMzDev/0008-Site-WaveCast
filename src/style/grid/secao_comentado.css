@@ -17,6 +17,8 @@
 	/*
 		Como a class 'secao__cartoes' está também presente nas outras classes (de seção vertical) e não se deseja aplicar o mesmo estilo para as 'verticais' então usar as classes
 			`.secao-horizontal .secao__cartoes`
+
+			Quando você escreve .secao-horizontal .secao__cartoes no CSS, está selecionando todos os elementos com a classe secao__cartoes que são descendentes (em qualquer nível) de um elemento com a classe secao-horizontal. Isso permite uma estilização mais específica e controlada dos elementos na página.
 	*/
 	display: grid;
 
